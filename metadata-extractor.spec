@@ -51,7 +51,7 @@ User documentation for metadata-extractor.
 
 %prep
 %setup -q -T -c
-%jar xf %{SOURCE0}
+jar xf %{SOURCE0}
 %patch0 -p0
 %patch1 -p1
 
