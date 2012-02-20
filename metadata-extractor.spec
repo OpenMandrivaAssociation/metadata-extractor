@@ -2,7 +2,7 @@
 # Alberto Altieri's from MIB work
 
 Name:		metadata-extractor
-Summary:	A project to extract Exif and Iptc image meta-data from media such as JPEG files
+Summary:	A project to extract Exif and Iptc image meta-data from media files
 URL:		http://www.drewnoakes.com/code/exif/
 Group:		Graphics
 Version:	2.3.1
@@ -19,6 +19,7 @@ BuildRequires:	update-alternatives
 BuildRequires:	xerces-j2
 BuildRequires:	xml-commons-apis
 Requires:	java >= 1.5
+Requires:	jpackage-utils
 BuildArch:	noarch
 
 %description
@@ -42,8 +43,8 @@ in the public domain.
 
 %package javadoc
 Summary:	User documentation for metadata-extractor
-Group:		Documentation/Other
-PreReq:		coreutils
+Group:		Development/Java
+Requires:	jpackage-utils
 
 %description javadoc
 User documentation for metadata-extractor.
@@ -85,7 +86,7 @@ popd
 
 %post javadoc
 %__rm -f %{_javadocdir}/%{name}
-ln -s %{name}-%{version} %{_javadocdir}/%{name}
+%__ln_s %{name}-%{version} %{_javadocdir}/%{name}
 
 %files
 %defattr(-,root,root)
