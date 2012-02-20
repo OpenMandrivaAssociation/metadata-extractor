@@ -18,6 +18,7 @@ BuildRequires:	junit
 BuildRequires:	update-alternatives
 BuildRequires:	xerces-j2
 BuildRequires:	xml-commons-apis
+BuildRequires:	java-rpmbuild
 Requires:	java >= 1.5
 Requires:	jpackage-utils
 BuildArch:	noarch
