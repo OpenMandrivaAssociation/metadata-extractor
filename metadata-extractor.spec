@@ -11,6 +11,7 @@ License:	ASL 2.0
 Source0:	http://www.drewnoakes.com/code/exif/%{name}-%{version}-src.jar
 Patch0:		metadata-extractor-build.xml.diff
 Patch1:		metadata-extractor-2.3.1-nosun.diff
+Patch2:		metadata-extractor-2.3.1-unmappable.patch
 BuildRequires:	ant
 BuildRequires:	ant-junit
 BuildRequires:	java-devel-openjdk
@@ -55,6 +56,7 @@ User documentation for metadata-extractor.
 jar xf %{SOURCE0}
 %patch0 -p0
 %patch1 -p1
+%patch2 -p1
 
 %__rm -rf Libraries
 
