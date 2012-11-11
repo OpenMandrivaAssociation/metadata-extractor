@@ -1,0 +1,20 @@
+--- build.xml	2006-11-26 19:34:44.000000000 +0100
++++ build.xml	2006-11-26 19:25:31.000000000 +0100
+@@ -8,7 +8,7 @@
+     <property name="build" value="Build"/>
+     <property name="src" value="src"/>
+     <property name="javadoc" value="javadoc"/>
+-    <property name="lib" value="Libraries"/>
++    <property name="lib" value="/usr/share/java"/>
+     <property name="verbose" value="true"/>
+     <property name="debug" value="off"/>
+     <property name="version" value="2.3.1"/>
+@@ -45,7 +45,7 @@
+     </target>
+ 
+     <target name="test" depends="compile" description="run all junit tests">
+-        <junit printsummary="yes" fork="yes" haltonfailure="yes">
++        <junit printsummary="yes" fork="yes" haltonfailure="no">
+             <classpath>
+                 <pathelement location="${build}"/>
+                 <pathelement path="${java.class.path}"/>
