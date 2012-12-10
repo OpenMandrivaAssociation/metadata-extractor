@@ -6,7 +6,7 @@ Summary:	A project to extract Exif and Iptc image meta-data from media files
 URL:		http://www.drewnoakes.com/code/exif/
 Group:		Graphics
 Version:	2.3.1
-Release:	%mkrel 1
+Release:	2
 License:	ASL 2.0
 Source0:	http://www.drewnoakes.com/code/exif/%{name}-%{version}-src.jar
 Patch0:		metadata-extractor-build.xml.diff
@@ -80,7 +80,7 @@ popd
 
 # javadoc
 %__install -dm 755 %{buildroot}%{_javadocdir}/%{name}-%{version}
-%__cp -pr javadoc/* \
+cp -pr javadoc/* \
 	%{buildroot}%{_javadocdir}/%{name}-%{version}
 %__ln_s %{name}-%{version} %{buildroot}%{_javadocdir}/%{name} # ghost symlink
 
@@ -100,4 +100,13 @@ popd
 %defattr(0644,root,root,0755)
 %doc %{_javadocdir}/%{name}-%{version}
 %ghost %doc %{_javadocdir}/%{name}
+
+
+
+%changelog
+* Mon Feb 20 2012 Andrey Bondrov <abondrov@mandriva.org> 2.3.1-1mdv2012.0
++ Revision: 778247
+- Add patch2 to fix unmappable character for encoding ASCII error
+- Add BuildRequires java-rpmbuild
+- imported package metadata-extractor
 
