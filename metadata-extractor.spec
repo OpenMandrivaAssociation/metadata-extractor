@@ -6,7 +6,7 @@ Summary:	A project to extract Exif and Iptc image meta-data from media files
 URL:		http://www.drewnoakes.com/code/exif/
 Group:		Graphics
 Version:	2.3.1
-Release:	2
+Release:	3
 License:	ASL 2.0
 Source0:	http://www.drewnoakes.com/code/exif/%{name}-%{version}-src.jar
 Patch0:		metadata-extractor-build.xml.diff
