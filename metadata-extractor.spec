@@ -3,7 +3,7 @@
 
 Name:		metadata-extractor
 Summary:	A project to extract Exif and Iptc image meta-data from media files
-URL:		http://www.drewnoakes.com/code/exif/
+URL:		https://www.drewnoakes.com/code/exif/
 Group:		Graphics
 Version:	2.3.1
 Release:	3
